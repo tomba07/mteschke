@@ -2,15 +2,15 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --c-bg:      #ffffff;
-  --c-surface: #f5f5f5;
-  --c-border:  #e0e0e0;
+  --c-bg:      #fdfcf9;
+  --c-surface: #f5f2ec;
+  --c-border:  #dedad2;
   --c-text:    #111111;
   --c-muted:   #555555;
-  --c-accent:  #0066cc;
-  --c-accent-h:#0052a3;
-  --c-badge:   #e8f0fc;
-  --c-badge-t: #0052a3;
+  --c-accent:  #1a6b3c;
+  --c-accent-h:#155730;
+  --c-badge:   #eaf4ef;
+  --c-badge-t: #155730;
 
   --ff-serif:  'Playfair Display', Georgia, serif;
   --ff-sans:   'Inter', system-ui, sans-serif;
