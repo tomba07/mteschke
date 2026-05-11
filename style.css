@@ -99,6 +99,8 @@ ul { list-style: none; }
 .btn:hover { background: var(--c-accent-h); border-color: var(--c-accent-h); text-decoration: none; transform: translateY(-1px); }
 .btn--ghost { background: transparent; color: var(--c-accent); }
 .btn--ghost:hover { background: var(--c-accent); color: #fff; }
+.nav .btn--sm { background: transparent; color: var(--c-accent); border-color: var(--c-accent); }
+.nav .btn--sm:hover { background: var(--c-accent); color: #fff; }
 .btn--sm { font-size: var(--size-xs); padding: .45em 1em; }
 .btn--lg { font-size: var(--size-lg); padding: .8em 2em; }
 
@@ -107,7 +109,7 @@ ul { list-style: none; }
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255,255,255,.92);
+  background: rgba(253,252,249,.92);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--c-border);
 }
