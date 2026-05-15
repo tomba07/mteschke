@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mirko — Portfolio</title>
+  <meta name="description" content="Portfolio and resume of Mirko — Software Engineer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── NAV ────────────────────────────────────────────────── -->
+  <header class="nav-wrap">
+    <nav class="nav container">
+      <a class="nav__logo" href="#top">M. Teschke</a>
+      <button class="nav__burger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a class="btn btn--sm" href="resume.pdf" target="_blank">Resume ↗</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ── HERO ───────────────────────────────────────────────── -->
+    <section class="hero container">
+      <p class="hero__kicker">Hello, I'm</p>
+      <h1 class="hero__name">Mirko</h1>
+      <p class="hero__role">Software Engineer &amp; Problem Solver</p>
+      <p class="hero__bio">
+        I build clean, purposeful software — from backend systems to polished
+        user interfaces. Currently based in [City, Country] and open to new
+        opportunities.
+      </p>
+      <div class="hero__cta">
+        <a class="btn" href="#projects">See my work</a>
+        <a class="btn btn--ghost" href="#contact">Get in touch</a>
+      </div>
+      <ul class="hero__socials">
+        <li><a href="https://github.com/tomba07" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/mirko-teschke-9187ba75/" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </section>
+
+    <!-- ── ABOUT ──────────────────────────────────────────────── -->
+    <section id="about" class="section about container">
+      <div class="section__label">About</div>
+      <div class="about__grid">
+        <div class="about__text">
+          <h2>A bit about me</h2>
+          <p>
+            I'm a software engineer with 15 years of experience building web
+            applications and distributed systems. I care deeply about writing
+            maintainable code and shipping products that people actually enjoy
+            using.
+          </p>
+          <p>
+            Outside work I enjoy [hobby], [hobby], and the occasional deep dive
+            into [something you find interesting].
+          </p>
+        </div>
+        <div class="about__photo-wrap">
+          <div class="about__photo-placeholder" aria-hidden="true">
+            <span>Your<br/>Photo</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── EXPERIENCE ─────────────────────────────────────────── -->
+    <section id="experience" class="section experience container">
+      <div class="section__label">Experience &amp; Skills</div>
+      <div class="exp__grid">
+        <div class="exp__timeline">
+          <h2>Work History</h2>
+
+          <article class="timeline-item">
+            <div class="timeline-item__meta">
+              <span class="timeline-item__date">2023 — Present</span>
+            </div>
+            <div class="timeline-item__body">
+              <h3 class="timeline-item__title">Senior Software Engineer</h3>
+              <p class="timeline-item__company">Company Name · Full-time</p>
+              <p class="timeline-item__desc">
+                Led development of [product/feature]. Reduced latency by X%.
+                Mentored a team of N engineers.
+              </p>
+              <ul class="tag-list">
+                <li>TypeScript</li><li>Node.js</li><li>PostgreSQL</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-item__meta">
+              <span class="timeline-item__date">2021 — 2023</span>
+            </div>
+            <div class="timeline-item__body">
+              <h3 class="timeline-item__title">Software Engineer</h3>
+              <p class="timeline-item__company">Previous Company · Full-time</p>
+              <p class="timeline-item__desc">
+                Built and maintained [product]. Improved test coverage from X%
+                to Y%.
+              </p>
+              <ul class="tag-list">
+                <li>Python</li><li>Django</li><li>React</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-item__meta">
+              <span class="timeline-item__date">2019 — 2021</span>
+            </div>
+            <div class="timeline-item__body">
+              <h3 class="timeline-item__title">Junior Developer</h3>
+              <p class="timeline-item__company">First Company · Full-time</p>
+              <p class="timeline-item__desc">
+                Contributed to frontend development of [product].
+              </p>
+              <ul class="tag-list">
+                <li>JavaScript</li><li>Vue.js</li><li>CSS</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <div class="exp__skills">
+          <h2>Skills</h2>
+          <div class="skills-group">
+            <h4>Languages</h4>
+            <ul class="tag-list tag-list--large">
+              <li>TypeScript</li><li>Python</li><li>Go</li><li>SQL</li>
+            </ul>
+          </div>
+          <div class="skills-group">
+            <h4>Frameworks &amp; Libraries</h4>
+            <ul class="tag-list tag-list--large">
+              <li>React</li><li>Node.js</li><li>Django</li><li>Next.js</li>
+            </ul>
+          </div>
+          <div class="skills-group">
+            <h4>Tools &amp; Platforms</h4>
+            <ul class="tag-list tag-list--large">
+              <li>Docker</li><li>Kubernetes</li><li>AWS</li><li>GitHub Actions</li>
+            </ul>
+          </div>
+          <div class="skills-group">
+            <h4>Education</h4>
+            <p class="edu">
+              <strong>B.Sc. Computer Science</strong><br/>
+              University Name · 2015 – 2019
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PROJECTS ────────────────────────────────────────────── -->
+    <section id="projects" class="section projects container">
+      <div class="section__label">Projects</div>
+      <h2>Selected Work</h2>
+      <div class="projects__grid">
+
+        <article class="project-card project-card--featured">
+          <div class="project-card__header">
+            <span class="project-card__badge">Featured</span>
+            <div class="project-card__links">
+              <a href="https://github.com/yourusername/project-one" target="_blank" rel="noopener">GitHub ↗</a>
+              <a href="https://your-live-demo.com" target="_blank" rel="noopener">Live ↗</a>
+            </div>
+          </div>
+          <h3 class="project-card__title">Project One</h3>
+          <p class="project-card__desc">
+            A short description of what this project does, the problem it
+            solves, and what makes it interesting or challenging.
+          </p>
+          <ul class="tag-list">
+            <li>React</li><li>TypeScript</li><li>PostgreSQL</li>
+          </ul>
+        </article>
+
+        <article class="project-card project-card--featured">
+          <div class="project-card__header">
+            <span class="project-card__badge">Featured</span>
+            <div class="project-card__links">
+              <a href="https://github.com/yourusername/project-two" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+          </div>
+          <h3 class="project-card__title">Project Two</h3>
+          <p class="project-card__desc">
+            Another project description. Explain the technical challenge,
+            your solution, and measurable impact if any.
+          </p>
+          <ul class="tag-list">
+            <li>Python</li><li>FastAPI</li><li>Redis</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__header">
+            <div class="project-card__links">
+              <a href="https://github.com/yourusername/project-three" target="_blank" rel="noopener">GitHub ↗</a>
+              <a href="#" target="_blank" rel="noopener">Live ↗</a>
+            </div>
+          </div>
+          <h3 class="project-card__title">Project Three</h3>
+          <p class="project-card__desc">
+            Description of a smaller or side project. Even simple projects
+            can demonstrate curiosity and initiative.
+          </p>
+          <ul class="tag-list">
+            <li>Go</li><li>CLI</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__header">
+            <div class="project-card__links">
+              <a href="https://github.com/yourusername/project-four" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+          </div>
+          <h3 class="project-card__title">Project Four</h3>
+          <p class="project-card__desc">
+            Another side project or open-source contribution worth
+            highlighting.
+          </p>
+          <ul class="tag-list">
+            <li>JavaScript</li><li>Browser Extension</li>
+          </ul>
+        </article>
+
+      </div>
+      <p class="projects__more">
+        More on <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub ↗</a>
+      </p>
+    </section>
+
+    <!-- ── CONTACT ────────────────────────────────────────────── -->
+    <section id="contact" class="section contact container">
+      <div class="section__label">Contact</div>
+      <div class="contact__inner">
+        <h2>Let's work together</h2>
+        <p>
+          I'm currently open to full-time roles and freelance projects.
+          Whether you have a question or just want to say hi — my inbox is
+          always open.
+        </p>
+        <a class="btn btn--lg" href="mailto:you@example.com">Say hello ↗</a>
+        <ul class="contact__links">
+          <li><a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer container">
+    <p>Designed &amp; built by <strong>Mirko Teschke</strong> · <span id="year"></span></p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
