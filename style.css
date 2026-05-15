@@ -13,8 +13,8 @@
   --c-badge-t: #155730;
   --c-nav-bg:  rgba(253,252,249,.92);
 
-  --ff-serif:  'Playfair Display', Georgia, serif;
-  --ff-sans:   'Inter', system-ui, sans-serif;
+  --ff-serif:  'Source Serif 4', Georgia, serif;
+  --ff-sans:   'Source Sans 3', system-ui, sans-serif;
 
   --size-xs:   0.75rem;
   --size-sm:   0.875rem;
@@ -138,7 +138,8 @@ ul { list-style: none; }
 .nav__logo {
   font-family: var(--ff-serif);
   font-size: var(--size-xl);
-  font-weight: 900;
+  font-weight: 500;
+  font-optical-sizing: auto;
   color: var(--c-text);
   letter-spacing: -.02em;
 }
@@ -195,9 +196,8 @@ ul { list-style: none; }
 .hero__name {
   font-family: var(--ff-serif);
   font-size: clamp(var(--size-3xl), 7vw, var(--size-4xl));
-  font-weight: 900;
-  line-height: 1.05;
-  letter-spacing: -.03em;
+  font-weight: 500;
+  font-optical-sizing: auto;
   color: var(--c-text);
   margin-bottom: .6rem;
 }
@@ -251,7 +251,8 @@ ul { list-style: none; }
 .about__text h2 {
   font-family: var(--ff-serif);
   font-size: var(--size-2xl);
-  font-weight: 700;
+  font-weight: 500;
+  font-optical-sizing: auto;
   margin-bottom: 1rem;
 }
 .about__text p + p { margin-top: 1rem; }
@@ -287,7 +288,8 @@ ul { list-style: none; }
 .exp__skills h2 {
   font-family: var(--ff-serif);
   font-size: var(--size-2xl);
-  font-weight: 700;
+  font-weight: 500;
+  font-optical-sizing: auto;
   margin-bottom: 2rem;
 }
 
@@ -377,7 +379,8 @@ ul { list-style: none; }
 .projects h2 {
   font-family: var(--ff-serif);
   font-size: var(--size-2xl);
-  font-weight: 700;
+  font-weight: 500;
+  font-optical-sizing: auto;
   margin-bottom: 2.5rem;
 }
 
@@ -463,7 +466,8 @@ ul { list-style: none; }
 .contact__inner h2 {
   font-family: var(--ff-serif);
   font-size: var(--size-3xl);
-  font-weight: 700;
+  font-weight: 500;
+  font-optical-sizing: auto;
   margin-bottom: 1rem;
 }
 .contact__inner p {
