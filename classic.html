@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-page="classic">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mirko — Portfolio</title>
-  <meta name="description" content="Portfolio and resume of Mirko — Software Engineer." />
+  <title>Mirko Teschke — Portfolio</title>
+  <meta name="description" content="Mirko Teschke — Software Engineer, Enterprise Web UI, Palo Alto." />
+  <script>document.documentElement.dataset.theme=localStorage.getItem('theme')||'dark'</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="controls.css" />
 </head>
 <body>
 
@@ -35,11 +37,11 @@
     <section class="hero container">
       <p class="hero__kicker">Hello, I'm</p>
       <h1 class="hero__name">Mirko</h1>
-      <p class="hero__role">Software Engineer &amp; Problem Solver</p>
+      <p class="hero__role">Software Engineer &amp; Enterprise UI</p>
       <p class="hero__bio">
         I build clean, purposeful software — from backend systems to polished
-        user interfaces. Currently based in [City, Country] and open to new
-        opportunities.
+        user interfaces. 15 years in the SAP ecosystem, currently based in
+        Palo Alto, CA.
       </p>
       <div class="hero__cta">
         <a class="btn" href="#projects">See my work</a>
@@ -52,26 +54,29 @@
     </section>
 
     <!-- ── ABOUT ──────────────────────────────────────────────── -->
-    <section id="about" class="section about container">
-      <div class="section__label">About</div>
-      <div class="about__grid">
+    <section id="about" class="section about">
+      <div class="container">
+        <div class="section__label">About</div>
+        <div class="about__grid">
         <div class="about__text">
           <h2>A bit about me</h2>
           <p>
             I'm a software engineer with 15 years of experience building web
-            applications and distributed systems. I care deeply about writing
-            maintainable code and shipping products that people actually enjoy
-            using.
+            applications and enterprise systems at SAP. I care deeply about
+            writing maintainable code and shipping products that people actually
+            enjoy using.
           </p>
           <p>
-            Outside work I enjoy [hobby], [hobby], and the occasional deep dive
-            into [something you find interesting].
+            Started through a dual study program in Germany, relocated to
+            Silicon Valley in 2018, and have been deep in SAPUI5, Fiori
+            Elements, and fullstack development ever since.
           </p>
         </div>
         <div class="about__photo-wrap">
           <div class="about__photo-placeholder" aria-hidden="true">
             <span>Your<br/>Photo</span>
           </div>
+        </div>
         </div>
       </div>
     </section>
@@ -85,50 +90,52 @@
 
           <article class="timeline-item">
             <div class="timeline-item__meta">
-              <span class="timeline-item__date">2023 — Present</span>
+              <span class="timeline-item__date">2018 — Present</span>
             </div>
             <div class="timeline-item__body">
               <h3 class="timeline-item__title">Senior Software Engineer</h3>
-              <p class="timeline-item__company">Company Name · Full-time</p>
+              <p class="timeline-item__company">SAP · Palo Alto, CA · Full-time</p>
               <p class="timeline-item__desc">
-                Led development of [product/feature]. Reduced latency by X%.
-                Mentored a team of N engineers.
+                Enterprise UI engineering on the US West Coast. Building SAPUI5
+                and Fiori Elements applications, fullstack product work, UI
+                architecture for large-scale enterprise systems.
               </p>
               <ul class="tag-list">
-                <li>TypeScript</li><li>Node.js</li><li>PostgreSQL</li>
+                <li>SAPUI5</li><li>Fiori Elements</li><li>TypeScript</li><li>CAP</li><li>OData</li>
               </ul>
             </div>
           </article>
 
           <article class="timeline-item">
             <div class="timeline-item__meta">
-              <span class="timeline-item__date">2021 — 2023</span>
+              <span class="timeline-item__date">2014 — 2018</span>
             </div>
             <div class="timeline-item__body">
               <h3 class="timeline-item__title">Software Engineer</h3>
-              <p class="timeline-item__company">Previous Company · Full-time</p>
+              <p class="timeline-item__company">SAP · Walldorf, Germany · Full-time</p>
               <p class="timeline-item__desc">
-                Built and maintained [product]. Improved test coverage from X%
-                to Y%.
+                Enterprise application development within the SAP ecosystem.
+                Web UI technologies, production systems, and core platform work.
               </p>
               <ul class="tag-list">
-                <li>Python</li><li>Django</li><li>React</li>
+                <li>SAPUI5</li><li>JavaScript</li><li>OData</li><li>SAP Ecosystem</li>
               </ul>
             </div>
           </article>
 
           <article class="timeline-item">
             <div class="timeline-item__meta">
-              <span class="timeline-item__date">2019 — 2021</span>
+              <span class="timeline-item__date">2011 — 2014</span>
             </div>
             <div class="timeline-item__body">
-              <h3 class="timeline-item__title">Junior Developer</h3>
-              <p class="timeline-item__company">First Company · Full-time</p>
+              <h3 class="timeline-item__title">Dual Study Program</h3>
+              <p class="timeline-item__company">SAP · B.Sc. Applied Computer Science</p>
               <p class="timeline-item__desc">
-                Contributed to frontend development of [product].
+                Combined software engineering degree with practical development
+                at SAP. Foundation in enterprise systems and applied computer science.
               </p>
               <ul class="tag-list">
-                <li>JavaScript</li><li>Vue.js</li><li>CSS</li>
+                <li>Java</li><li>Enterprise Systems</li><li>Applied CS</li>
               </ul>
             </div>
           </article>
@@ -137,28 +144,28 @@
         <div class="exp__skills">
           <h2>Skills</h2>
           <div class="skills-group">
-            <h4>Languages</h4>
+            <h4>Core</h4>
             <ul class="tag-list tag-list--large">
-              <li>TypeScript</li><li>Python</li><li>Go</li><li>SQL</li>
+              <li>SAPUI5</li><li>Fiori Elements</li><li>TypeScript</li><li>Enterprise UI Architecture</li>
             </ul>
           </div>
           <div class="skills-group">
-            <h4>Frameworks &amp; Libraries</h4>
+            <h4>Strong</h4>
             <ul class="tag-list tag-list--large">
-              <li>React</li><li>Node.js</li><li>Django</li><li>Next.js</li>
+              <li>React</li><li>Node.js</li><li>OData · CAP</li><li>Design Systems</li>
             </ul>
           </div>
           <div class="skills-group">
-            <h4>Tools &amp; Platforms</h4>
+            <h4>Comfortable</h4>
             <ul class="tag-list tag-list--large">
-              <li>Docker</li><li>Kubernetes</li><li>AWS</li><li>GitHub Actions</li>
+              <li>Fullstack prototyping</li><li>AI tooling</li><li>Cloud-native app patterns</li>
             </ul>
           </div>
           <div class="skills-group">
             <h4>Education</h4>
             <p class="edu">
-              <strong>B.Sc. Computer Science</strong><br/>
-              University Name · 2015 – 2019
+              <strong>B.Sc. Applied Computer Science</strong><br/>
+              DHBW Mannheim · 2011 – 2014
             </p>
           </div>
         </div>
@@ -166,83 +173,64 @@
     </section>
 
     <!-- ── PROJECTS ────────────────────────────────────────────── -->
-    <section id="projects" class="section projects container">
-      <div class="section__label">Projects</div>
-      <h2>Selected Work</h2>
-      <div class="projects__grid">
+    <section id="projects" class="section projects">
+      <div class="container">
+        <div class="section__label">Projects</div>
+        <h2>Selected Work</h2>
+        <div class="projects__grid">
 
         <article class="project-card project-card--featured">
           <div class="project-card__header">
             <span class="project-card__badge">Featured</span>
-            <div class="project-card__links">
-              <a href="https://github.com/yourusername/project-one" target="_blank" rel="noopener">GitHub ↗</a>
-              <a href="https://your-live-demo.com" target="_blank" rel="noopener">Live ↗</a>
-            </div>
           </div>
-          <h3 class="project-card__title">Project One</h3>
+          <h3 class="project-card__title">Metadata-driven Enterprise UI</h3>
           <p class="project-card__desc">
-            A short description of what this project does, the problem it
-            solves, and what makes it interesting or challenging.
+            Reusable UI patterns for enterprise teams built on Fiori Elements
+            and SAPUI5. Reduced repetition across teams, improved consistency
+            and developer experience across large-scale SAP applications.
           </p>
           <ul class="tag-list">
-            <li>React</li><li>TypeScript</li><li>PostgreSQL</li>
+            <li>SAPUI5</li><li>Fiori Elements</li><li>TypeScript</li><li>OData</li>
           </ul>
         </article>
 
         <article class="project-card project-card--featured">
           <div class="project-card__header">
             <span class="project-card__badge">Featured</span>
-            <div class="project-card__links">
-              <a href="https://github.com/yourusername/project-two" target="_blank" rel="noopener">GitHub ↗</a>
-            </div>
           </div>
-          <h3 class="project-card__title">Project Two</h3>
+          <h3 class="project-card__title">Fullstack CAP Application</h3>
           <p class="project-card__desc">
-            Another project description. Explain the technical challenge,
-            your solution, and measurable impact if any.
+            End-to-end enterprise application using SAP Cloud Application
+            Programming Model. Backend services, OData APIs, and a Fiori
+            Elements frontend — all from a single monorepo.
           </p>
           <ul class="tag-list">
-            <li>Python</li><li>FastAPI</li><li>Redis</li>
+            <li>CAP</li><li>Node.js</li><li>SAP HANA</li><li>Fiori Elements</li>
           </ul>
         </article>
 
         <article class="project-card">
           <div class="project-card__header">
             <div class="project-card__links">
-              <a href="https://github.com/yourusername/project-three" target="_blank" rel="noopener">GitHub ↗</a>
-              <a href="#" target="_blank" rel="noopener">Live ↗</a>
+              <a href="https://github.com/tomba07" target="_blank" rel="noopener">GitHub ↗</a>
             </div>
           </div>
-          <h3 class="project-card__title">Project Three</h3>
+          <h3 class="project-card__title">AI Tooling Experiments</h3>
           <p class="project-card__desc">
-            Description of a smaller or side project. Even simple projects
-            can demonstrate curiosity and initiative.
+            Exploring how AI-assisted tooling can improve developer workflows
+            in enterprise contexts — UI scaffolding, code generation, and
+            integrating LLMs into existing SAP development patterns.
           </p>
           <ul class="tag-list">
-            <li>Go</li><li>CLI</li>
-          </ul>
-        </article>
-
-        <article class="project-card">
-          <div class="project-card__header">
-            <div class="project-card__links">
-              <a href="https://github.com/yourusername/project-four" target="_blank" rel="noopener">GitHub ↗</a>
-            </div>
-          </div>
-          <h3 class="project-card__title">Project Four</h3>
-          <p class="project-card__desc">
-            Another side project or open-source contribution worth
-            highlighting.
-          </p>
-          <ul class="tag-list">
-            <li>JavaScript</li><li>Browser Extension</li>
+            <li>TypeScript</li><li>LLM APIs</li><li>SAPUI5</li>
           </ul>
         </article>
 
       </div>
-      <p class="projects__more">
-        More on <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub ↗</a>
-      </p>
+        <p class="projects__more">
+          More on <a href="https://github.com/tomba07" target="_blank" rel="noopener">GitHub ↗</a>
+        </p>
+      </div>
     </section>
 
     <!-- ── CONTACT ────────────────────────────────────────────── -->
@@ -251,14 +239,14 @@
       <div class="contact__inner">
         <h2>Let's work together</h2>
         <p>
-          I'm currently open to full-time roles and freelance projects.
+          I'm open to new opportunities and interesting projects.
           Whether you have a question or just want to say hi — my inbox is
           always open.
         </p>
-        <a class="btn btn--lg" href="mailto:you@example.com">Say hello ↗</a>
         <ul class="contact__links">
-          <li><a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a></li>
-          <li><a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://github.com/tomba07" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/mirko-teschke-9187ba75/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="resume.pdf" target="_blank">Resume ↗</a></li>
         </ul>
       </div>
     </section>
@@ -269,6 +257,16 @@
     <p>Designed &amp; built by <strong>Mirko Teschke</strong> · <span id="year"></span></p>
   </footer>
 
+  <!-- global view + theme controls -->
+  <div class="g-ctrl">
+    <button class="g-ctrl__seg" data-go="terminal" aria-label="Terminal view">terminal</button>
+    <button class="g-ctrl__seg" data-go="classic" aria-label="Classic view">classic</button>
+    <div class="g-ctrl__sep"></div>
+    <button class="g-ctrl__seg" data-go-theme="dark" aria-label="Dark theme">dark</button>
+    <button class="g-ctrl__seg" data-go-theme="light" aria-label="Light theme">light</button>
+  </div>
+
   <script src="main.js"></script>
+  <script src="controls.js"></script>
 </body>
 </html>

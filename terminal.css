@@ -17,10 +17,31 @@
   --chip-bg:    #21262d;
   --chip-hover: #2d333b;
   --chip-text:  #cdd9e5;
+  --inset-bg:   #090e15;
 
   --ff: 'IBM Plex Mono', 'Menlo', 'Consolas', monospace;
   --fs: 13.5px;
   --lh: 1.65;
+}
+
+[data-theme="light"] {
+  --bg:         #f6f8fa;
+  --term-bg:    #ffffff;
+  --bar-bg:     #f0f2f5;
+  --text:       #1f2328;
+  --muted:      #636c76;
+  --dim:        #9198a1;
+  --prompt:     #116329;
+  --cmd-color:  #0550ae;
+  --key:        #8250df;
+  --string:     #0a3069;
+  --warn:       #9a6700;
+  --link:       #0969da;
+  --border:     #d0d7de;
+  --chip-bg:    #f0f2f5;
+  --chip-hover: #e6e8eb;
+  --chip-text:  #1f2328;
+  --inset-bg:   #f0f4f8;
 }
 
 html, body {
@@ -33,6 +54,7 @@ html, body {
   -webkit-font-smoothing: antialiased;
 }
 
+
 /* ── LAYOUT ─────────────────────────────────────────────────── */
 .terminal {
   display: flex;
@@ -41,6 +63,11 @@ html, body {
   max-width: 900px;
   margin: 0 auto;
   border-inline: 1px solid var(--border);
+  background: var(--term-bg);
+  color: var(--text);
+  font-family: var(--ff);
+  font-size: var(--fs);
+  line-height: var(--lh);
 }
 
 /* ── TITLE BAR ───────────────────────────────────────────────── */
@@ -226,7 +253,7 @@ html, body {
   border-radius: 6px;
   padding: 1rem 1.25rem;
   margin-bottom: .75rem;
-  background: #090e15;
+  background: var(--inset-bg);
 }
 .project__path  { color: var(--dim); font-size: 12px; margin-bottom: .35rem; }
 .project__title { color: var(--string); font-weight: 600; margin-bottom: .45rem; font-size: 14px; }

@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-page="terminal">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>mirko.dev</title>
   <meta name="description" content="Mirko Teschke — Software Engineer, Enterprise Web UI, Palo Alto." />
+  <script>document.documentElement.dataset.theme=localStorage.getItem('theme')||'dark'</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="terminal.css" />
+  <link rel="stylesheet" href="controls.css" />
 </head>
 <body>
 
@@ -16,7 +18,7 @@
 
     <!-- title bar -->
     <div class="t-bar">
-<span class="t-title">mirko@dev: ~</span>
+      <span class="t-title">mirko@dev: ~</span>
       <span class="t-loc">Palo Alto, CA</span>
     </div>
 
@@ -52,6 +54,16 @@
 
   </div>
 
+  <!-- global view + theme controls -->
+  <div class="g-ctrl">
+    <button class="g-ctrl__seg" data-go="terminal" aria-label="Terminal view">terminal</button>
+    <button class="g-ctrl__seg" data-go="classic" aria-label="Classic view">classic</button>
+    <div class="g-ctrl__sep"></div>
+    <button class="g-ctrl__seg" data-go-theme="dark" aria-label="Dark theme">dark</button>
+    <button class="g-ctrl__seg" data-go-theme="light" aria-label="Light theme">light</button>
+  </div>
+
   <script src="terminal.js"></script>
+  <script src="controls.js"></script>
 </body>
 </html>

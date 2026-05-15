@@ -11,6 +11,7 @@
   --c-accent-h:#155730;
   --c-badge:   #eaf4ef;
   --c-badge-t: #155730;
+  --c-nav-bg:  rgba(253,252,249,.92);
 
   --ff-serif:  'Playfair Display', Georgia, serif;
   --ff-sans:   'Inter', system-ui, sans-serif;
@@ -31,6 +32,19 @@
 
   --nav-h: 68px;
   --max-w: 1100px;
+}
+
+[data-theme="dark"] {
+  --c-bg:      #0d1117;
+  --c-surface: #161b22;
+  --c-border:  #30363d;
+  --c-text:    #e6edf3;
+  --c-muted:   #8b949e;
+  --c-accent:  #3fb950;
+  --c-accent-h:#2ea043;
+  --c-badge:   #1b2b22;
+  --c-badge-t: #56d364;
+  --c-nav-bg:  rgba(13,17,23,.92);
 }
 
 html { scroll-behavior: smooth; }
@@ -109,7 +123,7 @@ ul { list-style: none; }
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(253,252,249,.92);
+  background: var(--c-nav-bg);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--c-border);
 }
