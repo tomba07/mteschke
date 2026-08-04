@@ -48,6 +48,7 @@ const COMMANDS = {
       <div class="kv"><span class="kv__k">contact</span><span class="kv__v">get in touch</span></div>
       <div class="kv"><span class="kv__k">resume</span><span class="kv__v">open resume PDF</span></div>
       <div class="kv"><span class="kv__k">clear</span><span class="kv__v">clear terminal</span></div>
+      <div class="kv"><span class="kv__k">classic</span><span class="kv__v">switch to classic view</span></div>
     `);
   },
 
@@ -251,6 +252,10 @@ const COMMANDS = {
 
   clear() {
     output.innerHTML = '';
+  },
+
+  classic() {
+    window.location.href = 'classic.html';
   }
 };
 
