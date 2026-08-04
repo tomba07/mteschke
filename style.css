@@ -7,10 +7,10 @@
   --c-border:  #dedad2;
   --c-text:    #111111;
   --c-muted:   #555555;
-  --c-accent:  #1a6b3c;
-  --c-accent-h:#155730;
-  --c-badge:   #eaf4ef;
-  --c-badge-t: #155730;
+  --c-accent:  #3d5a96;
+  --c-accent-h:#2f4878;
+  --c-badge:   #e8edf8;
+  --c-badge-t: #2f4878;
   --c-nav-bg:  rgba(253,252,249,.92);
 
   --ff-serif:  'Playfair Display', Georgia, serif;
@@ -259,6 +259,14 @@ ul { list-style: none; }
 
 .about__photo-wrap { flex-shrink: 0; }
 
+.about__photo {
+  width: 200px;
+  height: 200px;
+  border-radius: var(--radius-lg);
+  object-fit: cover;
+  display: block;
+}
+
 .about__photo-placeholder {
   width: 200px;
   height: 200px;
@@ -501,6 +509,7 @@ ul { list-style: none; }
   .about__grid     { grid-template-columns: 1fr; }
   .about__photo-wrap { order: -1; }
   .about__photo-placeholder { width: 140px; height: 140px; }
+  .about__photo { width: 140px; height: 140px; }
   .exp__grid       { grid-template-columns: 1fr; gap: 3rem; }
   .projects__grid  { grid-template-columns: 1fr; }
   .nav__links      {
