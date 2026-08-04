@@ -214,7 +214,7 @@ html, body {
 
 /* Key–value */
 .kv { display: flex; gap: 1.5rem; line-height: 1.9; }
-.kv__k { color: var(--key); min-width: 9ch; }
+.kv__k { color: var(--key); min-width: 11ch; }
 .kv__v { color: var(--text); }
 
 /* Git-log commits */
