@@ -4,6 +4,11 @@
   // Apply saved theme before first paint (also set in <head> inline, this is a fallback)
   html.dataset.theme = localStorage.getItem('theme') || 'dark';
 
+  function updatePhoto(theme) {
+    const photo = document.getElementById('about-photo');
+    if (photo) photo.src = theme === 'light' ? 'light.jpg' : 'dark.jpg';
+  }
+
   function updateActive() {
     const page  = html.dataset.page;
     const theme = html.dataset.theme;
@@ -23,9 +28,11 @@
       btn.addEventListener('click', () => {
         html.dataset.theme = btn.dataset.goTheme;
         localStorage.setItem('theme', btn.dataset.goTheme);
+        updatePhoto(btn.dataset.goTheme);
         updateActive();
       }));
 
     updateActive();
+    updatePhoto(html.dataset.theme);
   });
 })();
