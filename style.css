@@ -15,6 +15,17 @@
 
   --ff-serif:  'Playfair Display', Georgia, serif;
   --ff-sans:   'Inter', system-ui, sans-serif;
+}
+
+[data-page="classic"] {
+  --ff-serif:  'Finlandica Headline', Georgia, serif;
+  --ff-sans:   'Finlandica Text', system-ui, sans-serif;
+}
+
+[data-page="classic"] .nav__logo,
+[data-page="classic"] .hero__name { font-weight: 700; }
+
+[data-page="classic"] {
 
   --size-xs:   0.75rem;
   --size-sm:   0.875rem;
