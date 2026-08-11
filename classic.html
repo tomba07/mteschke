@@ -35,13 +35,12 @@
 
     <!-- ── HERO ───────────────────────────────────────────────── -->
     <section class="hero container">
-      <p class="hero__kicker">Hello, I'm</p>
-      <h1 class="hero__name">Mirko</h1>
+      <p class="hero__kicker">Hi, I'm</p>
+      <h1 class="hero__name">Mirko <span class="hero__pronounce">(MEER-ko)</span></h1>
       <p class="hero__role">Software Engineer &amp; Enterprise UI</p>
       <p class="hero__bio">
-        I build clean, purposeful software — from backend systems to polished
-        user interfaces. 15 years in the SAP ecosystem, currently based in
-        Palo Alto, CA.
+        15 years building enterprise web software at SAP — Walldorf, then
+        Palo Alto since 2018.
       </p>
       <div class="hero__cta">
         <a class="btn" href="#projects">See my work</a>
@@ -61,15 +60,10 @@
         <div class="about__text">
           <h2>A bit about me</h2>
           <p>
-            I'm a software engineer with 15 years of experience building web
-            applications and enterprise systems at SAP. I care deeply about
-            writing maintainable code and shipping products that people actually
-            enjoy using.
-          </p>
-          <p>
-            Started through a dual study program in Germany, relocated to
-            Silicon Valley in 2018, and have been deep in SAPUI5, Fiori
-            Elements, and fullstack development ever since.
+            Software engineer at SAP for 15 years. Started with a dual study
+            program in Walldorf, moved to Palo Alto in 2018. Most of that time
+            spent deep in SAPUI5, Fiori Elements, and fullstack work on top of
+            CAP.
           </p>
         </div>
         <div class="about__photo-wrap">
@@ -94,9 +88,9 @@
               <h3 class="timeline-item__title">Senior Software Engineer</h3>
               <p class="timeline-item__company">SAP · Palo Alto, CA · Full-time</p>
               <p class="timeline-item__desc">
-                Enterprise UI engineering on the US West Coast. Building SAPUI5
-                and Fiori Elements applications, fullstack product work, UI
-                architecture for large-scale enterprise systems.
+                UI engineering in the Palo Alto office. SAPUI5 and Fiori
+                Elements apps, fullstack product work with CAP and OData,
+                UI architecture across large enterprise codebases.
               </p>
               <ul class="tag-list">
                 <li>SAPUI5</li><li>Fiori Elements</li><li>TypeScript</li><li>CAP</li><li>OData</li>
@@ -112,8 +106,8 @@
               <h3 class="timeline-item__title">Software Engineer</h3>
               <p class="timeline-item__company">SAP · Walldorf, Germany · Full-time</p>
               <p class="timeline-item__desc">
-                Enterprise application development within the SAP ecosystem.
-                Web UI technologies, production systems, and core platform work.
+                Enterprise application development in Walldorf. Web UI on
+                SAPUI5, OData services, core platform work.
               </p>
               <ul class="tag-list">
                 <li>SAPUI5</li><li>JavaScript</li><li>OData</li><li>SAP Ecosystem</li>
@@ -129,8 +123,8 @@
               <h3 class="timeline-item__title">Dual Study Program</h3>
               <p class="timeline-item__company">SAP · B.Sc. Applied Computer Science</p>
               <p class="timeline-item__desc">
-                Combined software engineering degree with practical development
-                at SAP. Foundation in enterprise systems and applied computer science.
+                Dual study degree combining applied computer science at DHBW
+                Mannheim with hands-on development at SAP in Walldorf.
               </p>
               <ul class="tag-list">
                 <li>Java</li><li>Enterprise Systems</li><li>Applied CS</li>
@@ -183,9 +177,8 @@
           </div>
           <h3 class="project-card__title">Metadata-driven Enterprise UI</h3>
           <p class="project-card__desc">
-            Reusable UI patterns for enterprise teams built on Fiori Elements
-            and SAPUI5. Reduced repetition across teams, improved consistency
-            and developer experience across large-scale SAP applications.
+            Reusable SAPUI5 and Fiori Elements patterns shared across
+            enterprise teams — less copy-paste, more consistent UIs.
           </p>
           <ul class="tag-list">
             <li>SAPUI5</li><li>Fiori Elements</li><li>TypeScript</li><li>OData</li>
@@ -198,9 +191,8 @@
           </div>
           <h3 class="project-card__title">Fullstack CAP Application</h3>
           <p class="project-card__desc">
-            End-to-end enterprise application using SAP Cloud Application
-            Programming Model. Backend services, OData APIs, and a Fiori
-            Elements frontend — all from a single monorepo.
+            End-to-end enterprise app: CAP backend, OData V4 APIs, Fiori
+            Elements frontend — single monorepo.
           </p>
           <ul class="tag-list">
             <li>CAP</li><li>Node.js</li><li>SAP HANA</li><li>Fiori Elements</li>
@@ -215,12 +207,59 @@
           </div>
           <h3 class="project-card__title">AI Tooling Experiments</h3>
           <p class="project-card__desc">
-            Exploring how AI-assisted tooling can improve developer workflows
-            in enterprise contexts — UI scaffolding, code generation, and
-            integrating LLMs into existing SAP development patterns.
+            Side projects testing where LLMs fit into enterprise UI dev —
+            scaffolding, code generation, SAPUI5 patterns.
           </p>
           <ul class="tag-list">
             <li>TypeScript</li><li>LLM APIs</li><li>SAPUI5</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__header">
+            <div class="project-card__links">
+              <a href="https://booktrail.mteschke.com" target="_blank" rel="noopener">Live ↗</a>
+            </div>
+          </div>
+          <h3 class="project-card__title">BookTrail</h3>
+          <p class="project-card__desc">
+            CAP + Fiori Elements demo app. Book tracking with a proper
+            OData V4 backend and annotation-driven UI.
+          </p>
+          <ul class="tag-list">
+            <li>CAP</li><li>Fiori Elements</li><li>OData V4</li><li>Node.js</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__header">
+            <div class="project-card__links">
+              <a href="https://geschenk.mteschke.com" target="_blank" rel="noopener">Live ↗</a>
+            </div>
+          </div>
+          <h3 class="project-card__title">Geschenk</h3>
+          <p class="project-card__desc">
+            A gift-tracking web app for managing wishlists and occasions —
+            clean, minimal, and built for everyday use.
+          </p>
+          <ul class="tag-list">
+            <li>TypeScript</li><li>Web App</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__header">
+            <div class="project-card__links">
+              <a href="https://chessquestia.mteschke.com" target="_blank" rel="noopener">Live ↗</a>
+            </div>
+          </div>
+          <h3 class="project-card__title">ChessQuestia</h3>
+          <p class="project-card__desc">
+            A chess-themed learning and exploration tool — combining game
+            mechanics with knowledge discovery.
+          </p>
+          <ul class="tag-list">
+            <li>TypeScript</li><li>Chess</li>
           </ul>
         </article>
 
@@ -235,11 +274,9 @@
     <section id="contact" class="section contact container">
       <div class="section__label">Contact</div>
       <div class="contact__inner">
-        <h2>Let's work together</h2>
+        <h2>Let's talk</h2>
         <p>
-          I'm open to new opportunities and interesting projects.
-          Whether you have a question or just want to say hi — my inbox is
-          always open.
+          mirko.teschke@gmail.com
         </p>
         <ul class="contact__links">
           <li><a href="https://github.com/tomba07" target="_blank" rel="noopener">GitHub</a></li>

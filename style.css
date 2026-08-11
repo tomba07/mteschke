@@ -213,6 +213,15 @@ ul { list-style: none; }
   margin-bottom: .6rem;
 }
 
+.hero__pronounce {
+  font-size: var(--size-sm);
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--c-muted);
+  vertical-align: middle;
+  font-family: var(--ff-sans);
+}
+
 .hero__role {
   font-size: var(--size-xl);
   font-weight: 400;
