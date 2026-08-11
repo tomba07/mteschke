@@ -165,47 +165,45 @@ const COMMANDS = {
       <div class="s-head">ls -la projects/</div>
 
       <div class="project">
-        <div class="project__path">~/projects/metadata-driven-ui/</div>
-        <div class="project__title">Metadata-driven Enterprise UI</div>
+        <div class="project__path">~/projects/booktrail/</div>
+        <div class="project__title">BookTrail</div>
         <div class="project__desc">
-          Reusable UI patterns for enterprise teams built on Fiori Elements
-          and SAPUI5. Reduced repetition across teams, improved consistency
-          and developer experience across large-scale SAP applications.
+          CAP + Fiori Elements demo app. Book tracking with a proper
+          OData V4 backend and annotation-driven UI.
         </div>
         <div class="project__meta">
-          <div><span class="project__label">stack&nbsp;</span><span class="project__value">SAPUI5, Fiori Elements, TypeScript, OData</span></div>
-          <div><span class="project__label">role&nbsp;&nbsp;</span><span class="project__value">Frontend · UI Architecture</span></div>
-        </div>
-      </div>
-
-      <div class="project">
-        <div class="project__path">~/projects/fullstack-cap-app/</div>
-        <div class="project__title">Fullstack CAP Application</div>
-        <div class="project__desc">
-          End-to-end enterprise application using SAP Cloud Application
-          Programming Model. Backend services, OData APIs, and a Fiori
-          Elements frontend — all from a single monorepo.
-        </div>
-        <div class="project__meta">
-          <div><span class="project__label">stack&nbsp;</span><span class="project__value">CAP, Node.js, SAP HANA, Fiori Elements</span></div>
-          <div><span class="project__label">role&nbsp;&nbsp;</span><span class="project__value">Fullstack</span></div>
-        </div>
-      </div>
-
-      <div class="project">
-        <div class="project__path">~/projects/ai-tooling/</div>
-        <div class="project__title">AI Tooling Experiments</div>
-        <div class="project__desc">
-          Exploring how AI-assisted tooling can improve developer workflows
-          in enterprise contexts — UI scaffolding, code generation, and
-          integrating LLMs into existing SAP development patterns.
-        </div>
-        <div class="project__meta">
-          <div><span class="project__label">stack&nbsp;</span><span class="project__value">TypeScript, LLM APIs, SAPUI5</span></div>
-          <div><span class="project__label">role&nbsp;&nbsp;</span><span class="project__value">Exploration · Prototyping</span></div>
+          <div><span class="project__label">stack&nbsp;</span><span class="project__value">CAP, Fiori Elements, OData V4, Node.js</span></div>
         </div>
         <div class="project__links">
-          <a class="project__link" href="https://github.com/tomba07" target="_blank" rel="noopener">github.com/tomba07 ↗</a>
+          <a class="project__link" href="https://booktrail.mteschke.com" target="_blank" rel="noopener">booktrail.mteschke.com ↗</a>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project__path">~/projects/geschenk/</div>
+        <div class="project__title">Geschenk</div>
+        <div class="project__desc">
+          Gift tracking web app for managing wishlists and occasions.
+        </div>
+        <div class="project__meta">
+          <div><span class="project__label">stack&nbsp;</span><span class="project__value">TypeScript</span></div>
+        </div>
+        <div class="project__links">
+          <a class="project__link" href="https://geschenk.mteschke.com" target="_blank" rel="noopener">geschenk.mteschke.com ↗</a>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project__path">~/projects/chessquestia/</div>
+        <div class="project__title">ChessQuestia</div>
+        <div class="project__desc">
+          Chess-themed learning and exploration tool.
+        </div>
+        <div class="project__meta">
+          <div><span class="project__label">stack&nbsp;</span><span class="project__value">TypeScript</span></div>
+        </div>
+        <div class="project__links">
+          <a class="project__link" href="https://chessquestia.mteschke.com" target="_blank" rel="noopener">chessquestia.mteschke.com ↗</a>
         </div>
       </div>
 

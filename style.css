@@ -58,6 +58,13 @@
   --c-nav-bg:  rgba(13,17,23,.92);
 }
 
+[data-page="classic"][data-theme="dark"] {
+  --c-accent:  #6b9adb;
+  --c-accent-h:#5585c8;
+  --c-badge:   #1a2540;
+  --c-badge-t: #9dbff0;
+}
+
 html { scroll-behavior: smooth; }
 
 body {
