@@ -1,69 +1,264 @@
 <!DOCTYPE html>
-<html lang="en" data-page="terminal">
+<html lang="en" data-page="classic">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mirko.dev</title>
+  <title>Mirko Teschke — Portfolio</title>
   <meta name="description" content="Mirko Teschke — Software Engineer, Enterprise Web UI, Palo Alto." />
-  <script>document.documentElement.dataset.theme=localStorage.getItem('theme')||'dark'</script>
+  <script>document.documentElement.dataset.theme=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark')</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="terminal.css" />
-  <link rel="stylesheet" href="controls.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Finlandica+Headline:wght@700;900&family=Finlandica+Text:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <div class="terminal" id="terminal">
+  <!-- ── NAV ────────────────────────────────────────────────── -->
+  <header class="nav-wrap">
+    <nav class="nav container">
+      <a class="nav__logo" href="#top">Mirko Teschke</a>
+      <ul class="nav__links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a class="btn btn--sm" href="resume.pdf" target="_blank">Resume ↗</a></li>
+      </ul>
+      <div class="nav__end">
+        <button class="theme-switch" id="theme-toggle" aria-label="Toggle theme">
+          <span class="theme-switch__slot">
+            <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          </span>
+          <span class="theme-switch__slot">
+            <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></svg>
+          </span>
+          <span class="theme-switch__thumb"></span>
+        </button>
+        <button class="nav__burger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
 
-    <!-- title bar -->
-    <div class="t-bar">
-      <span class="t-title">mirko@dev: ~</span>
-      <span class="t-loc">Palo Alto, CA</span>
-    </div>
+  <main id="top">
 
-    <!-- scrollable output -->
-    <div class="t-output" id="output" role="log" aria-live="polite"></div>
+    <!-- ── HERO ───────────────────────────────────────────────── -->
+    <section class="hero container">
+      <p class="hero__kicker">Hi, I'm</p>
+      <h1 class="hero__name">Mirko <span class="hero__pronounce">(MEER-ko)</span></h1>
+      <p class="hero__role">Software Engineer &amp; Enterprise UI</p>
+      <p class="hero__bio">
+        15 years building enterprise web software at SAP — Germany, then
+        Palo Alto since 2018.
+      </p>
+      <div class="hero__cta">
+        <a class="btn" href="#projects">See my work</a>
+        <a class="btn btn--ghost" href="#contact">Get in touch</a>
+      </div>
+      <ul class="hero__socials">
+        <li><a href="https://github.com/tomba07" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/mirko-teschke-9187ba75/" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </section>
 
-    <!-- input row -->
-    <div class="t-input-row">
-      <span class="t-input-prompt">$</span>
-      <input
-        type="text"
-        id="cmd-input"
-        class="t-input"
-        autocomplete="off"
-        spellcheck="false"
-        placeholder="type a command…"
-        aria-label="Terminal command input"
-      />
-    </div>
+    <!-- ── ABOUT ──────────────────────────────────────────────── -->
+    <section id="about" class="section about">
+      <div class="container">
+        <div class="section__label">About</div>
+        <div class="about__grid">
+        <div class="about__text">
+          <h2>A bit about me</h2>
+          <p>
+            Software engineer at SAP for 15 years. Started with a dual study
+            program in Walldorf, moved to Palo Alto in 2018. Most of that time
+            spent deep in SAPUI5, Fiori Elements, and fullstack work on top of
+            CAP.
+          </p>
+        </div>
+        <div class="about__photo-wrap">
+          <img class="about__photo" id="about-photo" src="dark.jpg" alt="Mirko Teschke" />
+        </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- clickable command chips -->
-    <div class="t-chips" id="chips">
-      <span class="t-chips__label">run:</span>
-      <button class="chip" data-cmd="whoami">whoami</button>
-      <button class="chip" data-cmd="experience">experience</button>
-      <button class="chip" data-cmd="stack">stack</button>
-      <button class="chip" data-cmd="projects">projects</button>
-      <button class="chip" data-cmd="principles">principles</button>
-      <button class="chip" data-cmd="contact">contact</button>
-      <a class="chip chip--link" href="resume.pdf" target="_blank" rel="noopener">resume ↗</a>
-      <button class="chip chip--util" data-cmd="clear">clear</button>
-    </div>
+    <!-- ── EXPERIENCE ─────────────────────────────────────────── -->
+    <section id="experience" class="section experience container">
+      <div class="section__label">Experience &amp; Skills</div>
+      <div class="exp__grid">
+        <div class="exp__timeline">
+          <h2>Work History</h2>
 
-  </div>
+          <article class="timeline-item">
+            <div class="timeline-item__meta">
+              <span class="timeline-item__date">2018 — Present</span>
+            </div>
+            <div class="timeline-item__body">
+              <h3 class="timeline-item__title">Senior Software Engineer</h3>
+              <p class="timeline-item__company">SAP · Palo Alto, CA · Full-time</p>
+              <p class="timeline-item__desc">
+                UI engineering in the Palo Alto office. SAPUI5 and Fiori
+                Elements apps, fullstack product work with CAP and OData,
+                UI architecture across large enterprise codebases.
+              </p>
+              <ul class="tag-list">
+                <li>SAPUI5</li><li>Fiori Elements</li><li>TypeScript</li><li>CAP</li><li>OData</li>
+              </ul>
+            </div>
+          </article>
 
-  <!-- global view + theme controls -->
-  <div class="g-ctrl">
-    <button class="g-ctrl__seg" data-go="terminal" aria-label="Terminal view">terminal</button>
-    <button class="g-ctrl__seg" data-go="classic" aria-label="Classic view">classic</button>
-    <div class="g-ctrl__sep"></div>
-    <button class="g-ctrl__seg" data-go-theme="dark" aria-label="Dark theme">dark</button>
-    <button class="g-ctrl__seg" data-go-theme="light" aria-label="Light theme">light</button>
-  </div>
+          <article class="timeline-item">
+            <div class="timeline-item__meta">
+              <span class="timeline-item__date">2014 — 2018</span>
+            </div>
+            <div class="timeline-item__body">
+              <h3 class="timeline-item__title">Software Engineer</h3>
+              <p class="timeline-item__company">SAP · Walldorf, Germany · Full-time</p>
+              <p class="timeline-item__desc">
+                Enterprise application development in Walldorf. Web UI on
+                SAPUI5, OData services, core platform work.
+              </p>
+              <ul class="tag-list">
+                <li>SAPUI5</li><li>JavaScript</li><li>OData</li><li>SAP Ecosystem</li>
+              </ul>
+            </div>
+          </article>
 
-  <script src="terminal.js"></script>
+          <article class="timeline-item">
+            <div class="timeline-item__meta">
+              <span class="timeline-item__date">2011 — 2014</span>
+            </div>
+            <div class="timeline-item__body">
+              <h3 class="timeline-item__title">Dual Study Program</h3>
+              <p class="timeline-item__company">SAP · B.Sc. Applied Computer Science</p>
+              <p class="timeline-item__desc">
+                Dual study degree combining applied computer science at DHBW
+                Mannheim with hands-on development at SAP in Walldorf.
+              </p>
+              <ul class="tag-list">
+                <li>Java</li><li>Enterprise Systems</li><li>Applied CS</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <div class="exp__skills">
+          <h2>Skills</h2>
+          <div class="skills-group">
+            <h4>Core</h4>
+            <ul class="tag-list tag-list--large">
+              <li>TypeScript</li><li>React</li><li>UI Architecture</li>
+            </ul>
+          </div>
+          <div class="skills-group">
+            <h4>Strong</h4>
+            <ul class="tag-list tag-list--large">
+              <li>Node.js</li><li>Fullstack prototyping</li><li>AI tooling</li><li>Cloud-native app patterns</li>
+            </ul>
+          </div>
+          <div class="skills-group">
+            <h4>Comfortable</h4>
+            <ul class="tag-list tag-list--large">
+              <li>SAPUI5</li><li>Fiori Elements</li><li>OData · CAP</li>
+            </ul>
+          </div>
+          <div class="skills-group">
+            <h4>Education</h4>
+            <p class="edu">
+              <strong>B.Sc. Applied Computer Science</strong><br/>
+              DHBW Mannheim · 2011 – 2014
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PROJECTS ────────────────────────────────────────────── -->
+    <section id="projects" class="section projects">
+      <div class="container">
+        <div class="section__label">Projects</div>
+        <h2>Selected Work</h2>
+        <div class="projects__grid">
+
+        <article class="project-card">
+          <div class="project-card__header">
+            <div class="project-card__links">
+              <a href="https://booktrail.mteschke.com" target="_blank" rel="noopener">Live ↗</a>
+            </div>
+          </div>
+          <h3 class="project-card__title">BookTrail</h3>
+          <p class="project-card__desc">
+            CAP + Fiori Elements demo app. Book tracking with a proper
+            OData V4 backend and annotation-driven UI.
+          </p>
+          <ul class="tag-list">
+            <li>CAP</li><li>Fiori Elements</li><li>OData V4</li><li>Node.js</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__header">
+            <div class="project-card__links">
+              <a href="https://geschenk.mteschke.com" target="_blank" rel="noopener">Live ↗</a>
+            </div>
+          </div>
+          <h3 class="project-card__title">Geschenk</h3>
+          <p class="project-card__desc">
+            A gift-tracking web app for managing wishlists and occasions —
+            clean, minimal, and built for everyday use.
+          </p>
+          <ul class="tag-list">
+            <li>TypeScript</li><li>Web App</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__header">
+            <div class="project-card__links">
+              <a href="https://chessquestia.mteschke.com" target="_blank" rel="noopener">Live ↗</a>
+            </div>
+          </div>
+          <h3 class="project-card__title">ChessQuestia</h3>
+          <p class="project-card__desc">
+            A chess-themed learning and exploration tool — combining game
+            mechanics with knowledge discovery.
+          </p>
+          <ul class="tag-list">
+            <li>TypeScript</li><li>Chess</li>
+          </ul>
+        </article>
+
+      </div>
+        <p class="projects__more">
+          More on <a href="https://github.com/tomba07" target="_blank" rel="noopener">GitHub ↗</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ── CONTACT ────────────────────────────────────────────── -->
+    <section id="contact" class="section contact container">
+      <div class="section__label">Contact</div>
+      <div class="contact__inner">
+        <h2>Let's talk</h2>
+        <p>
+          mirko.teschke@gmail.com
+        </p>
+        <ul class="contact__links">
+          <li><a href="https://github.com/tomba07" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/mirko-teschke-9187ba75/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="resume.pdf" target="_blank">Resume ↗</a></li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer container">
+    <p>Designed &amp; built by <strong>Mirko Teschke</strong> · <span id="year"></span></p>
+  </footer>
+
+  <script src="main.js"></script>
   <script src="controls.js"></script>
 </body>
 </html>

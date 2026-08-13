@@ -1,38 +1,24 @@
 (function () {
   const html = document.documentElement;
 
-  // Apply saved theme before first paint (also set in <head> inline, this is a fallback)
-  html.dataset.theme = localStorage.getItem('theme') || 'dark';
+  html.dataset.theme = localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
 
   function updatePhoto(theme) {
     const photo = document.getElementById('about-photo');
     if (photo) photo.src = theme === 'light' ? 'light.jpg' : 'dark.jpg';
   }
 
-  function updateActive() {
-    const page  = html.dataset.page;
-    const theme = html.dataset.theme;
-    document.querySelectorAll('.g-ctrl__seg[data-go]').forEach(b =>
-      b.classList.toggle('is-active', b.dataset.go === page));
-    document.querySelectorAll('.g-ctrl__seg[data-go-theme]').forEach(b =>
-      b.classList.toggle('is-active', b.dataset.goTheme === theme));
-  }
-
   document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.g-ctrl__seg[data-go]').forEach(btn =>
-      btn.addEventListener('click', () => {
-        window.location.href = btn.dataset.go === 'terminal' ? 'index.html' : 'classic.html';
-      }));
+    const btn = document.getElementById('theme-toggle');
+    if (!btn) return;
 
-    document.querySelectorAll('.g-ctrl__seg[data-go-theme]').forEach(btn =>
-      btn.addEventListener('click', () => {
-        html.dataset.theme = btn.dataset.goTheme;
-        localStorage.setItem('theme', btn.dataset.goTheme);
-        updatePhoto(btn.dataset.goTheme);
-        updateActive();
-      }));
+    btn.addEventListener('click', () => {
+      const next = html.dataset.theme === 'dark' ? 'light' : 'dark';
+      html.dataset.theme = next;
+      localStorage.setItem('theme', next);
+      updatePhoto(next);
+    });
 
-    updateActive();
     updatePhoto(html.dataset.theme);
   });
 })();
