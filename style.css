@@ -474,8 +474,8 @@ ul { list-style: none; }
   display: flex;
   gap: 1.5rem;
   overflow-x: auto;
-  overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
+  padding-top: 4px;
   padding-left: max(1.5rem, calc((100% - var(--max-w)) / 2 + 1.5rem));
   padding-right: max(1.5rem, calc((100% - var(--max-w)) / 2 + 1.5rem));
   padding-bottom: 1.5rem;
@@ -493,6 +493,7 @@ ul { list-style: none; }
   flex-direction: column;
   gap: .75rem;
   flex: 0 0 300px;
+  position: relative;
 }
 .project-card:hover {
   box-shadow: var(--shadow-lg);
@@ -506,29 +507,21 @@ ul { list-style: none; }
 .project-card__header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: .5rem;
+  justify-content: flex-end;
 }
-.project-card__badge {
-  font-size: var(--size-xs);
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: .08em;
-  color: var(--c-accent);
-  background: var(--c-badge);
-  padding: .2em .65em;
-  border-radius: 99px;
-}
-.project-card__links {
-  display: flex;
-  gap: .75rem;
-}
+
 .project-card__links a {
   font-size: var(--size-xs);
   font-weight: 600;
   color: var(--c-muted);
+  text-decoration: none;
   transition: color .18s;
+}
+.project-card__links a::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-lg);
 }
 .project-card__links a:hover { color: var(--c-accent); text-decoration: none; }
 
