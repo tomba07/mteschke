@@ -21,7 +21,7 @@ links.querySelectorAll('a').forEach(a => {
 
 // Scroll-triggered fade-in
 const fadeEls = document.querySelectorAll(
-  '.hero, .about__grid, .timeline-item, .skills-group, .project-card, .contact__inner'
+  '.hero, .about__grid, .timeline-item, .skills-group, .contact__inner'
 );
 
 const observer = new IntersectionObserver(
