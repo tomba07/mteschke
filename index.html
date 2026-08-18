@@ -4,12 +4,35 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mirko Teschke — Portfolio</title>
-  <meta name="description" content="Mirko Teschke — Software Engineer, Enterprise Web UI, Palo Alto." />
+  <meta name="description" content="Mirko Teschke — Software Engineer, Web & Full-Stack Development, Palo Alto." />
   <script>document.documentElement.dataset.theme=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark')</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Finlandica+Headline:wght@700;900&family=Finlandica+Text:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Tighter hero rhythm: fewer visual rows and a single action line */
+    .hero__name { margin-bottom: 0.25rem; }
+    .hero__role { margin-top: 0; margin-bottom: 1.25rem; }
+    .hero__bio { margin-bottom: 1.75rem; max-width: 44rem; }
+    .hero__actions {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .hero__actions .hero__cta,
+    .hero__actions .hero__socials {
+      margin: 0;
+    }
+    @media (max-width: 640px) {
+      .hero__actions {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -45,20 +68,21 @@
 
     <!-- ── HERO ───────────────────────────────────────────────── -->
     <section class="hero container">
-      <p class="hero__kicker">Hi, I'm</p>
       <h1 class="hero__name">Mirko <span class="hero__pronounce">(MEER-ko)</span></h1>
       <p class="hero__role">Software Engineer</p>
       <p class="hero__bio">
-        15 years building web applications and platforms.
+        15 years building web applications and platforms, from Germany to Palo Alto.
       </p>
-      <div class="hero__cta">
-        <a class="btn" href="#projects">See my work</a>
-        <a class="btn btn--ghost" href="#contact">Get in touch</a>
+      <div class="hero__actions">
+        <div class="hero__cta">
+          <a class="btn" href="#projects">See my work</a>
+          <a class="btn btn--ghost" href="#contact">Get in touch</a>
+        </div>
+        <ul class="hero__socials">
+          <li><a href="https://github.com/tomba07" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/mirko-teschke-9187ba75/" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
       </div>
-      <ul class="hero__socials">
-        <li><a href="https://github.com/tomba07" target="_blank" rel="noopener">GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/mirko-teschke-9187ba75/" target="_blank" rel="noopener">LinkedIn</a></li>
-      </ul>
     </section>
 
     <!-- ── ABOUT ──────────────────────────────────────────────── -->
