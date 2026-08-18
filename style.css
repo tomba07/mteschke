@@ -729,6 +729,10 @@ ul {
   .project-card__links a {
     white-space: nowrap;
   }
+
+  .projects__grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ── CONTACT ─────────────────────────────────────────────────── */
