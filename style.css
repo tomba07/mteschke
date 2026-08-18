@@ -258,10 +258,8 @@ ul { list-style: none; }
 
 .hero__kicker {
   font-size: var(--size-sm);
-  font-weight: 500;
-  color: var(--c-accent);
-  margin-bottom: .75rem;
-  letter-spacing: .04em;
+  font-weight: 200;
+  color: var(--c-muted);
 }
 
 .hero__name {
@@ -271,7 +269,6 @@ ul { list-style: none; }
   line-height: 1.05;
   letter-spacing: -.03em;
   color: var(--c-text);
-  margin-bottom: .6rem;
 }
 
 .hero__pronounce {
@@ -284,7 +281,7 @@ ul { list-style: none; }
 }
 
 .hero__role {
-  font-size: var(--size-xl);
+  font-size: var(--size-l);
   font-weight: 400;
   color: var(--c-muted);
   margin-bottom: 1.5rem;
