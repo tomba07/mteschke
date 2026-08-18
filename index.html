@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mirko Teschke — Portfolio</title>
-    <meta name="description" content="Mirko Teschke — Software Engineer, Enterprise Web UI, Palo Alto." />
+    <meta name="description" content="Mirko Teschke — Software Engineer, Web & Full-Stack Development, Palo Alto." />
     <script>
       document.documentElement.dataset.theme =
         localStorage.getItem("theme") || (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
@@ -16,59 +16,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-
-    <style>
-      .projects__grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 1rem;
-        margin-top: 2rem;
-      }
-
-      .projects__grid .project-card {
-        width: auto;
-        min-width: 0;
-        height: 100%;
-      }
-
-      .projects__grid .project-card {
-        padding: 1.4rem;
-      }
-
-      .project-card__header {
-        display: flex;
-        align-items: baseline;
-        justify-content: space-between;
-        gap: 1rem;
-        min-height: 0;
-        margin-bottom: 0.75rem;
-      }
-
-      .project-card__title {
-        margin: 0;
-      }
-
-      .projects__grid:not(.is-expanded) .project-card--extra {
-        display: none;
-      }
-
-      .projects__toggle {
-        display: block;
-        margin: 1.5rem auto 0;
-      }
-
-      @media (max-width: 900px) {
-        .projects__grid {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-      }
-
-      @media (max-width: 600px) {
-        .projects__grid {
-          grid-template-columns: 1fr;
-        }
-      }
-    </style>
   </head>
   <body>
     <!-- ── NAV ────────────────────────────────────────────────── -->
@@ -326,7 +273,6 @@
               <ul class="tag-list">
                 <li>Web App</li>
                 <li>LLM Integration</li>
-
               </ul>
             </article>
 
@@ -427,29 +373,6 @@
     <footer class="footer container">
       <p>Designed &amp; built by <strong>Mirko Teschke</strong> · <span id="year"></span></p>
     </footer>
-
     <script src="main.js"></script>
-    <script src="controls.js"></script>
-
-    <script>
-      (() => {
-        const grid = document.getElementById("projects-grid");
-        const toggle = document.getElementById("projects-toggle");
-        if (!grid || !toggle) return;
-
-        toggle.addEventListener("click", () => {
-          const expanded = grid.classList.toggle("is-expanded");
-          toggle.textContent = expanded ? "Show less" : "Show more";
-          toggle.setAttribute("aria-expanded", String(expanded));
-
-          if (!expanded) {
-            document.getElementById("projects")?.scrollIntoView({
-              behavior: "smooth",
-              block: "start"
-            });
-          }
-        });
-      })();
-    </script>
   </body>
 </html>
