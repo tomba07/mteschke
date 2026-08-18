@@ -352,7 +352,7 @@ ul {
 }
 
 .hero__role {
-  font-size: var(--size-lg);
+  font-size: var(--size-md);
   font-weight: 400;
   color: var(--c-muted);
   margin-bottom: 1.5rem;
